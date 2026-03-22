@@ -1,0 +1,197 @@
+1.
+arvind@DESKTOP-I8B4G6E:~$ ping google.com
+PING google.com (142.251.223.238) 56(84) bytes of data.
+64 bytes from lcmaaa-al-in-f14.1e100.net (142.251.223.238): icmp_seq=1 ttl=117 time=33.0 ms
+64 bytes from lcmaaa-al-in-f14.1e100.net (142.251.223.238): icmp_seq=2 ttl=117 time=6.66 ms
+64 bytes from lcmaaa-al-in-f14.1e100.net (142.251.223.238): icmp_seq=3 ttl=117 time=13.3 ms
+
+
+arvind@DESKTOP-I8B4G6E:~$ nslookup www.google.com
+Server:         10.255.255.254
+Address:        10.255.255.254#53
+
+Non-authoritative answer:
+Name:   www.google.com
+Address: 142.251.155.119
+Name:   www.google.com
+Address: 142.251.152.119
+Name:   www.google.com
+
+
+
+arvind@DESKTOP-I8B4G6E:~$ ping www.facebook.com
+PING star-mini.c10r.facebook.com (57.144.208.1) 56(84) bytes of data.
+64 bytes from edge-star-mini-shv-01-maa3.facebook.com (57.144.208.1): icmp_seq=2 ttl=55 time=13.0 ms
+64 bytes from edge-star-mini-shv-01-maa3.facebook.com (57.144.208.1): icmp_seq=3 ttl=55 time=19.9 ms
+64 bytes from edge-star-mini-shv-01-maa3.facebook.com (57.144.208.1): icmp_seq=4 ttl=55 time=13.1 ms
+
+arvind@DESKTOP-I8B4G6E:~$ nslookup www.facebook.com
+Server:         10.255.255.254
+Address:        10.255.255.254#53
+
+Non-authoritative answer:
+www.facebook.com        canonical name = star-mini.c10r.facebook.com.
+Name:   star-mini.c10r.facebook.com
+Address: 57.144.54.1
+;; Got recursion not available from 10.255.255.254
+Name:   star-mini.c10r.facebook.com
+Address: 2a03:2880:f334:1:face:b00c:0:25de
+
+
+
+arvind@DESKTOP-I8B4G6E:~$ ping www.amazon.com
+PING cf.47cf2c8c9-frontier.amazon.com (18.67.150.142) 56(84) bytes of data.
+64 bytes from server-18-67-150-142.maa51.r.cloudfront.net (18.67.150.142): icmp_seq=1 ttl=248 time=6.77 ms
+64 bytes from server-18-67-150-142.maa51.r.cloudfront.net (18.67.150.142): icmp_seq=2 ttl=248 time=12.4 ms
+
+arvind@DESKTOP-I8B4G6E:~$ nslookup www.amazon.com
+Server:         10.255.255.254
+Address:        10.255.255.254#53
+
+Non-authoritative answer:
+www.amazon.com  canonical name = tp.47cf2c8c9-frontier.amazon.com.
+tp.47cf2c8c9-frontier.amazon.com        canonical name = cf.47cf2c8c9-frontier.amazon.com.
+Name:   cf.47cf2c8c9-frontier.amazon.com
+Address: 18.67.150.142
+;; Got recursion not available from 10.255.255.254
+Name:   cf.47cf2c8c9-frontier.amazon.com
+Address: 2600:9000:2241:4800:7:49a5:5fd6:da1
+Name:   cf.47cf2c8c9-frontier.amazon.com
+Address: 2600:9000:2241:7e00:7:49a5:5fd6:da1
+
+
+arvind@DESKTOP-I8B4G6E:~$ ping www.github.com
+PING github.com (20.207.73.82) 56(84) bytes of data.
+64 bytes from 20.207.73.82: icmp_seq=1 ttl=117 time=25.3 ms
+64 bytes from 20.207.73.82: icmp_seq=2 ttl=117 time=25.8 ms
+
+arvind@DESKTOP-I8B4G6E:~$ nslookup www.github.com
+Server:         10.255.255.254
+Address:        10.255.255.254#53
+
+Non-authoritative answer:
+www.github.com  canonical name = github.com.
+Name:   github.com
+Address: 20.207.73.82
+
+
+arvind@DESKTOP-I8B4G6E:~$ ping www.cisco.com
+PING e2867.dsca.akamaiedge.net (23.41.120.121) 56(84) bytes of data.
+64 bytes from a23-41-120-121.deploy.static.akamaitechnologies.com (23.41.120.121): icmp_seq=1 ttl=56 time=6.65 ms
+64 bytes from a23-41-120-121.deploy.static.akamaitechnologies.com (23.41.120.121): icmp_seq=2 ttl=56 time=10.4 ms
+64 bytes from a23-41-120-121.deploy.static.akamaitechnologies.com (23.41.120.121): icmp_seq=3 ttl=56 time=28.8 ms
+
+arvind@DESKTOP-I8B4G6E:~$ nslookup www.cisco.com
+Server:         10.255.255.254
+Address:        10.255.255.254#53
+
+Non-authoritative answer:
+www.cisco.com   canonical name = www.cisco.com.akadns.net.
+www.cisco.com.akadns.net        canonical name = wwwds.cisco.com.edgekey.net.
+wwwds.cisco.com.edgekey.net     canonical name = wwwds.cisco.com.edgekey.net.globalredir.akadns.net.
+wwwds.cisco.com.edgekey.net.globalredir.akadns.net      canonical name = e2867.dsca.akamaiedge.net.
+Name:   e2867.dsca.akamaiedge.net
+Address: 23.41.120.121
+Name:   e2867.dsca.akamaiedge.net
+Address: 2600:140f:5e00:482::b33
+Name:   e2867.dsca.akamaiedge.net
+Address: 2600:140f:5e00:480::b33
+
+
+
+3.
+arvind@DESKTOP-I8B4G6E:~$ traceroute www.google.com
+traceroute to www.google.com (142.251.155.119), 64 hops max
+  1   172.31.112.1  1.191ms  0.528ms  0.847ms
+  2   192.168.1.1  2.221ms  2.505ms  2.012ms
+  3   10.240.15.24  4.476ms  6.765ms  8.910ms
+  4   *  *  *
+  5   61.95.206.49  -15484.307ms  6.002ms  6.980ms
+  6   116.119.164.19  8.411ms  5.793ms  6.236ms
+  7   142.251.155.119  10.021ms  6.289ms  7.273ms
+
+arvind@DESKTOP-I8B4G6E:~$ traceroute -I www.google.com
+traceroute to www.google.com (142.250.182.68), 64 hops max
+  1   172.31.112.1  0.777ms  0.457ms  0.505ms
+  2   192.168.1.1  2.735ms  2.539ms  2.284ms
+  3   10.240.15.24  4.831ms  70.732ms  4.885ms
+  4   172.31.0.138  9.137ms  66.510ms  8.485ms
+  5   61.95.206.49  73.629ms  9.183ms  4.656ms
+  6   116.119.164.19  71.352ms  7.819ms  *
+  7   72.14.205.196  25.777ms  124.775ms  10.170m
+
+
+5&6.why ping fails
+
+VLAN 10 ≠ VLAN 20
+
+VLAN features
+Isolation but no direct communication and hence we need a router.
+
+
+9&10.
+BEFORE:
+VLAN 10 to VLAN 20 no communication
+AFTER :
+VLAN 10 → Router → VLAN 20 and hence communication  works
+
+PC1 → Switch → Router → Switch → PC2
+
+
+11.
+C:\>ping 192.168.20.2
+
+Pinging 192.168.20.2 with 32 bytes of data:
+
+Reply from 192.168.20.2: bytes=32 time=4ms TTL=127
+Reply from 192.168.20.2: bytes=32 time<1ms TTL=127
+Reply from 192.168.20.2: bytes=32 time=1ms TTL=127
+Reply from 192.168.20.2: bytes=32 time=9ms TTL=127
+
+Ping statistics for 192.168.20.2:
+    Packets: Sent = 4, Received = 4, Lost = 0 (0% loss),
+Approximate round trip times in milli-seconds:
+    Minimum = 0ms, Maximum = 9ms, Average = 3ms
+
+15.
+arvind@DESKTOP-I8B4G6E:~$ iperf3 -c 127.0.0.1
+Connecting to host 127.0.0.1, port 5201
+[  5] local 127.0.0.1 port 51358 connected to 127.0.0.1 port 5201
+[ ID] Interval           Transfer     Bitrate         Retr  Cwnd
+[  5]   0.00-1.00   sec  5.46 GBytes  46.9 Gbits/sec   18   3.18 MBytes
+[  5]   1.00-2.00   sec  5.61 GBytes  48.2 Gbits/sec    0   3.18 MBytes
+[  5]   2.00-3.00   sec  5.62 GBytes  48.3 Gbits/sec    0   3.18 MBytes
+[  5]   3.00-4.00   sec  5.83 GBytes  50.1 Gbits/sec    0   3.18 MBytes
+[  5]   4.00-5.00   sec  5.54 GBytes  47.6 Gbits/sec    0   3.18 MBytes
+[  5]   5.00-6.00   sec  5.60 GBytes  48.1 Gbits/sec    0   4.12 MBytes
+[  5]   6.00-7.00   sec  5.41 GBytes  46.5 Gbits/sec    0   4.12 MBytes
+[  5]   7.00-8.00   sec  5.50 GBytes  47.2 Gbits/sec    3   4.12 MBytes
+
+test for 10 seconds
+arvind@DESKTOP-I8B4G6E:~$ iperf3 -c 127.0.0.1 -t 10
+Connecting to host 127.0.0.1, port 5201
+[  5] local 127.0.0.1 port 43548 connected to 127.0.0.1 port 5201
+[ ID] Interval           Transfer     Bitrate         Retr  Cwnd
+[  5]   0.00-1.00   sec  5.29 GBytes  45.3 Gbits/sec    0   4.12 MBytes
+[  5]   1.00-2.00   sec  5.40 GBytes  46.4 Gbits/sec    1   4.12 MBytes
+[  5]   2.00-3.00   sec  5.47 GBytes  47.0 Gbits/sec    0   4.12 MBytes
+
+using udp
+arvind@DESKTOP-I8B4G6E:~$ iperf3 -c 127.0.0.1 -u
+Connecting to host 127.0.0.1, port 5201
+[  5] local 127.0.0.1 port 43789 connected to 127.0.0.1 port 5201
+[ ID] Interval           Transfer     Bitrate         Total Datagrams
+[  5]   0.00-1.00   sec   128 KBytes  1.05 Mbits/sec  4
+[  5]   1.00-2.00   sec   128 KBytes  1.05 Mbits/sec  4
+
+set bandwidth
+arvind@DESKTOP-I8B4G6E:~$ iperf3 -c 127.0.0.1 -u -b 10M
+Connecting to host 127.0.0.1, port 5201
+[  5] local 127.0.0.1 port 60223 connected to 127.0.0.1 port 5201
+[ ID] Interval           Transfer     Bitrate         Total Datagrams
+[  5]   0.00-1.00   sec  1.22 MBytes  10.2 Mbits/sec  39
+
+
+arvind@DESKTOP-I8B4G6E:~$ ps aux | grep iperf3
+iperf3      3098  9.0  0.1  17420  4096 ?        Ss   16:44   0:14 /usr/bin/iperf3 --server --interval 0
+arvind      3231  0.0  0.0   4088  1920 pts/0    S+   16:47   0:00 grep iperf3
