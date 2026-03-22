@@ -1,0 +1,115 @@
+1.
+arvind@DESKTOP-I8B4G6E:~$ ping 192.168.1.1
+
+
+PING 192.168.1.1 (192.168.1.1) 56(84) bytes of data.
+64 bytes from 192.168.1.1: icmp_seq=1 ttl=63 time=5.57 ms
+64 bytes from 192.168.1.1: icmp_seq=2 ttl=63 time=5.19 ms
+64 bytes from 192.168.1.1: icmp_seq=3 ttl=63 time=3.21 ms
+64 bytes from 192.168.1.1: icmp_seq=4 ttl=63 time=8.92 ms
+
+Sender has ip address of receiver but doesn't have mac address.
+Arp helps by mapping the ip address to the physical mac address.
+
+2.ARP is used to map IP addresses to MAC addresses. In Packet Tracer simulation, when PC1 sends a ping to PC2, it first sends an ARP request asking for the MAC address of PC2. PC2 replies with its MAC address, and communication begins.
+
+In ARP spoofing, a malicious device sends a fake ARP reply, claiming to have the IP address of another device. This causes the sender to associate the wrong MAC address with the IP, leading to incorrect data delivery and potential security attacks like man-in-the-middle.
+
+3.
+C:\>ping 192.168.1.2
+
+Pinging 192.168.1.2 with 32 bytes of data:
+
+Reply from 192.168.1.2: bytes=32 time=1ms TTL=128
+Reply from 192.168.1.2: bytes=32 time=1ms TTL=128
+Reply from 192.168.1.2: bytes=32 time<1ms TTL=128
+
+
+4.DORA process:
+The DHCP client broadcasts a discover message to find a DHCP server for IP assignment
+The DHCP Server unicasts a offer message to the client.
+The DHCP client request IP address from the server.
+The server acknowledges and assigns IP .
+
+
+5.
+Given:
+
+192.168.1.0/24
+Total IPs = 256
+4 subnets
+
+
+->2^𝑛=4
+->n=2 bits
+New subnet mask
+/24 + 2 = /26
+So each subnet = /26
+
+IPs per subnet
+
+Remaining host bits = 32-26=6bits
+
+2^6=64
+Each subnet = 64 IPs (62 usable)
+
+Subnet ranges :
+
+Block size = 64
+
+0 → 64 → 128 → 192
+Subnet	Network	Usable Range	Broadcast
+1	192.168.1.0	1–62	.63
+2	192.168.1.64	65–126	.127
+3	192.168.1.128	129–190	.191
+4	192.168.1.192	193–254	.255
+
+
+C:\>ping 192.168.1.65
+
+Pinging 192.168.1.65 with 32 bytes of data:
+
+Request timed out.
+Request timed out.
+Request timed out.
+Request timed out.
+
+Ping statistics for 192.168.1.65:
+    Packets: Sent = 4, Received = 0, Lost = 4 (100% loss),
+
+Ther is data loss because,different VLAN  means different subnet and hence without a router  there is no communication.
+
+
+6.
+IP	  Class	      Default Mask
+10.1.1.1	  Class A	255.0.0.0
+172.16.5.10 Class B	255.255.0.0
+192.168.1.5 Class C	255.255.255.0
+
+range:
+Class A → 1–126
+Class B → 128–191
+Class C → 192–223
+
+
+7.
+C:\>ping 10.0.0.1
+
+Pinging 10.0.0.1 with 32 bytes of data:
+
+Reply from 10.0.0.1: bytes=32 time<1ms TTL=255
+Reply from 10.0.0.1: bytes=32 time<1ms TTL=255
+Reply from 10.0.0.1: bytes=32 time<1ms TTL=255
+Reply from 10.0.0.1: bytes=32 time<1ms TTL=255
+
+Ping statistics for 10.0.0.1:
+    Packets: Sent = 4, Received = 4, Lost = 0 (0% loss),
+Approximate round trip times in milli-seconds:
+    Minimum = 0ms, Maximum = 0ms, Average = 0ms
+
+
+Source IP = 192.168.1.2 (PC)
+Source IP =192.168.1.1 (Router public IP)
+
+Source IP = 192.168.1.3 (PC)
+Source IP = 10.0.0.1 (Router public IP)
